@@ -127,8 +127,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\fragment.shader" />
     <None Include="..\..\vertex.shader" />
+    <None Include="fragment1.shader" />
+    <None Include="fragment2.shader" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

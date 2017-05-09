@@ -163,8 +163,6 @@ int main()
 	};
 	*/
 
-	
-
 	GLuint VBOs[2], VAOs[2],EBO;
 	glGenBuffers(2, VBOs);
 	//glGenBuffers(1,&EBO);
@@ -213,6 +211,12 @@ int main()
 		//glDrawElements(GL_TRIANGLES,6,GL_UNSIGNED_INT,0);
 		// draw second trianle
 		glUseProgram(shaderProgramYellow);
+
+		GLfloat timeValue = glfwGetTime();
+		GLfloat greenValue = (sin(timeValue)) + 0.5;
+		GLint vertexColorLocation = glGetUniformLocation(shaderProgramYellow,"ourColor");
+		glUniform4f(vertexColorLocation,0.0f,greenValue,0.0f,0.5f);
+		
 		glBindVertexArray(VAOs[1]);
 		glDrawArrays(GL_TRIANGLES,0,3);
 
